@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <title>Snake Game</title>
+</head>
+<body>
+        <div class="page">
+            <sidebar>
+                <h1 class="title">Snake Game</h1>
+                <div class="container-opt">
+                    <span>
+                        Aumentar a dificuldade
+                    </span>
+                    <button class="btn-speed">
+                        Easy
+                    </button>
+                </div>
+                <div class="container-opt">
+                    <span>
+                        Adicionar objetos
+                    </span>
+                    <button class="btn-object">
+                        0
+                    </button>
+                </div>
+                <button class="btn-zerar">
+                    Zerar high score
+                </button>
+            </sidebar>
+            <div class="game">
+                <div class="container">
+                    <div class="score">Score: <span class="score--value">00</span></div>
+                    <div class="highscore">High Score: <span class="highscore--value">00</span></div>
+                </div>
+            
+                <div class="menu-screen">
+                    <span class="game-over">game over</span>
+                    <span class="final-score">score <span>00</span></span>
+            
+                    <button class="btn-play">
+                        <span class="material-symbols-outlined">
+                            play_circle
+                        </span>
+                        
+                        Jogar novamente
+                    </button>
+                </div>
+                <canvas width="600" height="600"></canvas>
+            </div>
+            <sidebar>
+                <div class="my-name">
+                    Feito por:
+                    <span>Felipe Ferreira Dev</span>
+                </div>
+                <a href="https://github.com/felipeferreiradev">GitHub</a>
+                <a href="">README</a>
+            </sidebar>
+        </div>
+        <script src="./js/script.js"></script>
+</body>
+</html>

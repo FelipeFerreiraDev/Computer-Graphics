@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppings", sans-serif;
+}
+
+body {
+    background-color: #191919;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+
+canvas {
+    background-color: #111;
+    max-height: 80vh;
+    width: 40vw;
+}
+
+.page {
+    padding: 50px 50px 0px 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+.container {
+    width: 40vw;
+    background: rgb(184, 107, 255);
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid rgb(184, 107, 255);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+sidebar h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: rgb(184, 107, 255);
+}
+
+button:hover{
+    filter: brightness(0.8);
+}
+
+sidebar .btn-zerar {
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px 10px 12px;
+    font-weight: 600;
+    color: #ffffff;
+    display: flex;
+    background: rgb(184, 107, 255);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+sidebar .my-name {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+sidebar span {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+sidebar a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 10px;
+    background: rgb(184, 107, 255);
+    border-radius: 4px;
+    width: 100%;
+    padding: 10px 15px 10px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a:hover{
+    filter: brightness(0.8);
+}
+
+.container-opt {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.container-opt button {
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px 10px 12px;
+    font-weight: 600;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.score, .highscore {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.score--value, .highscore--value {
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.game {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.menu-screen {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+.game-over {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.final-score {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.btn-play {
+    border: none;
+    border-radius: 100px;
+    padding: 10px 15px 10px 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+}
