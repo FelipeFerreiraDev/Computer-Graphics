@@ -7,8 +7,11 @@ import numpy as np
 import pytesseract
 
 # Carrega a imagem
-car = cv2.imread('Images/black car/IMG_20230701_115532_0.jpg')
-red = cv2.imread('Images/red car/IMG_20230701_115717_0.jpg')
+# car = cv2.imread('Images/black car/IMG_20230701_115532_0.jpg')
+car = cv2.imread('Images/black car/IMG_20230701_115608_0.jpg')
+# car = cv2.imread('Images/red car/IMG_20230701_115646_0.jpg')
+# car = cv2.imread('Images/ana car/WhatsApp Image 2023-07-04 at 08.32.30 (2).jpeg')
+# car = cv2.imread('Images/ana car/WhatsApp Image 2023-07-04 at 08.32.31 (2).jpeg')
 
 def exibeImage(title, image):
     cv2.imshow(title, image)
@@ -126,26 +129,9 @@ exibeImage('Imagem gray', imagem_cortada)
 imagem_cortada = filtroGauss(imagem_cortada, (5, 5))
 exibeImage('Imagem gauss', imagem_cortada)
 
-# # Aplicando uma limiarização adaptativa para obter o conteúdo preto em branco
-# imagem_cortada = cv2.adaptiveThreshold(imagem_cortada, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)
-# exibeImage('Imagem adaptive', imagem_cortada)
-
 # Aplica filtro de otsu
 _, threshold = cv2.threshold(imagem_cortada, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
 exibeImage('OTSU', threshold)
-
-# # Aplica o filtro de gauss
-# imagem_cortada = filtroGauss(imagem_cortada, (5, 5))
-# exibeImage('Imagem gauss', imagem_cortada)
-
-# # aplica mediana
-# imagem_cortada = filtroMediana(imagem_cortada, 3)
-# exibeImage('Imagem mediana', imagem_cortada)
-
-# # Aplica mediana
-# imagem_cortada = filtroMediana(imagem_cortada, 3)
-# exibeImage('Imagem mediana', imagem_cortada)
-
 
 text= pytesseract.image_to_string(imagem_cortada, lang='eng')
 print("detected " + text)

@@ -7,7 +7,7 @@ import numpy as np
 import pytesseract
 
 # Carrega a imagem
-black = cv2.imread('Images/black car/IMG_20230701_115553_0.jpg')
+black = cv2.imread('Images/black car/IMG_20230701_115532_1.jpg')
 red = cv2.imread('Images/red car/IMG_20230701_115717_0.jpg')
 ana = cv2.imread('Images/ana car/WhatsApp Image 2023-07-04 at 08.32.31.jpeg')
 
@@ -114,20 +114,22 @@ for contorno in contornos:
 
             # Aplica o filtro de cinza
             imagem_cortada = filtroGray(imagem_cortada)
-            # exibeImage('Imagem gray', imagem_cortada)
+            exibeImage('Imagem gray', imagem_cortada)
 
             # Aplica filtro de otsu
             _, threshold = cv2.threshold(imagem_cortada, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
-            # exibeImage('OTSU', threshold)
+            exibeImage('OTSU', threshold)
 
             # Aplica o filtro de mediana
             imagem_cortada = filtroMediana(imagem_cortada, 3)
-            # exibeImage('Imagem mediana', imagem_cortada)
+            exibeImage('Imagem mediana', imagem_cortada)
 
             text= pytesseract.image_to_string(imagem_cortada, lang='eng')
             if text != "" and len(text) > 1:
                 print("detected " + text)
+                sys.exit()
 
             text= pytesseract.image_to_string(imagem_cortada, config='--psm 11')
             if text != "" and len(text) > 1:
                 print("detected " + text)
+                sys.exit()
